@@ -1,0 +1,13 @@
+{
+  "appId": "com.mycompany.callcenter",
+  "appName": "Baghy Shaqlawa Call Center",
+  "webDir": "www",
+  "server": {
+    "url": "__APP_URL__",
+    "errorPath": "offline.html",
+    "androidScheme": "https"
+  },
+  "android": {
+    "backgroundColor": "#0f7a5c"
+  }
+}

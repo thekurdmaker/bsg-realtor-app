@@ -1,0 +1,16 @@
+{
+  "name": "bsg-realtor-app",
+  "version": "1.1.0",
+  "private": true,
+  "description": "BSG Call Center realtor app: web app (iPhone PWA) + Android shell (Capacitor) with native OneSignal push",
+  "scripts": {
+    "sync": "cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.2",
+    "@capacitor/core": "8.5.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.2"
+  }
+}
