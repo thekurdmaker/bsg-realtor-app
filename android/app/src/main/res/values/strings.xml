@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Baghy Shaqlawa Call Center</string>
+    <string name="title_activity_main">Baghy Shaqlawa Call Center</string>
+    <string name="package_name">com.mycompany.callcenter</string>
+    <string name="custom_url_scheme">com.mycompany.callcenter</string>
+</resources>
