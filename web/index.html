@@ -1523,7 +1523,7 @@ const Push = {
       window.OneSignalDeferred = window.OneSignalDeferred || [];
       window.OneSignalDeferred.push(async (OS) => {
         try {
-          await OS.init({ appId: PUSH_APP_ID, serviceWorkerPath: 'sw.js', serviceWorkerParam: { scope: '/' }, notifyButton: { enable: false } });
+          await OS.init({ appId: PUSH_APP_ID, serviceWorkerPath: 'OneSignalSDKWorker.js', serviceWorkerParam: { scope: '/' }, notifyButton: { enable: false } });
           OS.Notifications.addEventListener('permissionChange', () => this.refresh());
           this.sdk = OS; resolve(OS);
         } catch (e) { resolve(null); }
@@ -2016,7 +2016,7 @@ async function boot() {
   applyTheme();
   window.BSGR = Object.freeze({ version: CFG.version, refresh: () => loadAll(false), open: (id) => openLead(id) });
   if ('serviceWorker' in navigator && location.protocol === 'https:' && !isNativeApp()) {
-    navigator.serviceWorker.register('sw.js').catch(() => { /* sw.js not uploaded — the app still works */ });
+    navigator.serviceWorker.register('OneSignalSDKWorker.js', { scope: '/' }).catch(() => { /* sw.js not uploaded — the app still works */ });
   }
   if (!auth.s) { App.showLogin(); return; }
   S.me = lsGet('me', null);
